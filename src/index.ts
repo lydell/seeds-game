@@ -1,6 +1,6 @@
+import "./index.css";
 import "pepjs";
 import * as Cheats from "./ts/cheats";
-import { Elm } from "./elm/Main";
 import * as Cache from "./ts/cache";
 import * as Audio from "./ts/audio";
 import * as Scroll from "./ts/scroll";
@@ -56,7 +56,7 @@ function init() {
 }
 
 function createApp() {
-  return Elm.Main.init({
+  return (window as any).Elm.Main.init({
     node: document.getElementById("app"),
     flags: {
       now: Date.now(),
